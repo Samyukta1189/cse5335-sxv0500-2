@@ -1,0 +1,20 @@
+require 'mongo'
+require 'csv'
+
+mongo_uri = 'mongodb://heroku_zcv2fdx1:nbl7j60dsuekm0kgj8jl5sqqr9@ds055594.mongolab.com:55594/heroku_zcv2fdx1'
+
+begin
+    client = Mongo::Client.new([ 'ds053794.mongolab.com:53794' ],:database =>'heroku_sbddk600',:user=>'heroku_sbddk600',:password=>'qlc03tq84elf3uptbsr49i1fi2');
+    puts "connected"
+    db = client.database
+    db.collection_names.each{|name| puts name }
+        coll_db=db.collection('univ_sampledb')
+        count=1
+    CSV.foreach('univ_sampledb.csv', :headers => true) do |csv_obj|
+               result=coll_db.insert_one({ :unitid => csv_obj['UNITID'], :opeid => csv_obj['OPEID'], :opeid6 => csv_obj['opeid6'], :instnm => csv_obj['INSTNM'], :city => csv_obj['CITY'], :stabbr => csv_obj['STABBR'], :insturl => csv_obj['INSTURL'], :otherurl => csv_obj['NPCURL'], :locale => csv_obj['LOCALE']})
+           #cnt=cnt+1           
+                
+        end     
+        puts "insertion done"
+
+end
