@@ -31,7 +31,7 @@ begin
 		instURL=temp['insturl']	
 		otherURL=temp['npcurl']
 		locale=temp['locale']
- 		puts "#{unitID} -- #{opeID} -- #{opeID6} -- #{instName} -- #{city} -- #{state} -- #{instURL} -- #{otherURL} -- #{locale}"
+ 		puts  "#{unitID} -- #{opeID} -- #{opeID6} -- #{instName} -- #{city} -- #{state} -- #{instURL} -- #{otherURL} -- #{locale}"
 	    
 	  end  
     
