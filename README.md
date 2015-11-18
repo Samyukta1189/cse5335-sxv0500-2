@@ -1,11 +1,9 @@
-####cse5335-project-1
+####cse5335-sxv0500-2
 =====================
 #####Name: Samyukta Vuyyuru
 ----------------------
 #####UTA id: 1001110500
 ---------------------
-#####website: https://cse5335-sxv0500.herokuapp.com/
---------------------------------------------------------
 
 #####1.  External data source used to populate your Heroku database.
 
