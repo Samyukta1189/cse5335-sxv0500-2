@@ -53,7 +53,8 @@
 #####3. Easy implementations
 
      The easy or simple implementation are:
-     * Using MongoDb data source to insert and retrieve dataset into and from the MongoDb 
+     * Creating addons in the Heroku server.
+     * Using MongoDb  to insert and retrieve dataset into and from the Heroku Mongolab. 
      * Selecting a datasource which satisfies all the requirements of having a primary and non-primary keys.
 
 #####4. Hard implementations
@@ -62,6 +63,6 @@
     * Using the postgres database in Windows. Installation of Postgres 9.5 in Windows requires to add the 'psql' environment
     variables to the %PATH% variable.
     * When using json file to parse the csv attributes to json, a lot of data parse errors where reported which had to be    dentified and corrected before executions.
-    
+    * Working with json library files for non-primary key implementation.
 
 
