@@ -19,7 +19,7 @@ begin
 	 puts "Retrieved successfully"   
  	 puts "the retrieved data for UNITID  :"+key+" is displayed below"
 	 puts " OPEID -- opeid6 -- INSTNM -- CITY -- STABBR -- INSTURL -- NPCURL -- LOCALE"
-   	 attribute=JSON.parse(query)
+   	 attribute=JSON.parse(res_query)
 	 if unless attribute.nil? or res_query == 0  
    	     puts "#{attribute[0]} -- #{attribute[1]} -- #{attribute[2]} -- #{attribute[3]} -- #{attribute[4]} -- #{attribute[5]} -- #{attribute[6]} -- #{attribute[7]}"	     
          end
