@@ -47,6 +47,12 @@
      *Redis
       heroku run ruby insert_redis.rb
       heroku run ruby retrieve_redis.rb
+      
+      git pull
+      git push -u origin master
+      
+      heroku sharing: add emmons@uta.edu
+      heroku sharing: add samvaran.rallabandi@mavs.uta.edu
 
 #####3. Easy implementations
 
