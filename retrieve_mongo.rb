@@ -6,7 +6,7 @@ mongo_uri = 'mongodb://heroku_zcv2fdx1:nbl7j60dsuekm0kgj8jl5sqqr9@ds055594.mongo
 begin
     client = Mongo::Client.new([ 'ds055594.mongolab.com:55594' ],:database =>'heroku_zcv2fdx1',:user=>'heroku_zcv2fdx1',:password=>'nbl7j60dsuekm0kgj8jl5sqqr9');
     puts "Connected to Mongodb"
-	puts "Enter a primary key value [UNITID]"
+	puts "Enter a primary key for university_mongo database [UNITID]"
 	key = gets
 	if(key.strip! == nil)
 	key_value=key

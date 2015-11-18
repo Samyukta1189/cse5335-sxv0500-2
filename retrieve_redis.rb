@@ -7,25 +7,25 @@ require 'json'
 begin 
     redisConn = Redis.new(:url => "redis://h:pbk0q15cl43kv87r17chtkab4ta@ec2-54-83-59-218.compute-1.amazonaws.com:10389")
     #redisConn = Redis.connect :url => ENV["redis://h:pbf731iss2eu3jaoojajbagnfs7@ec2-54-83-9-36.compute-1.amazonaws.com:18119"] 
-    puts 'connected...'    
-    puts "Enter the Key value (UNITID)"
-    primary_key=gets
-    if primary_key.strip! == nil
-    query=redisConn.get(primary_key)
+    puts 'connected to Redis...'    
+    puts "Enter the primary key attributeue (UNITID)"
+    key=gets
+    if key.strip! == nil
+    res_query=redisConn.get(key)
     else
-    query=redisConn.get(primary_key)
+    res_query=redisConn.get(key)
     end
-    if unless query.nil? or query == 0  
-	 puts "Retrieve success"   
- 	 puts "the retrieved data for UNITID key :"+primary_key
-	 puts " OPEID | opeid6 | INSTNM | CITY | STABBR | INSTURL | NPCURL | LOCALE"
-   	 val=JSON.parse(query)
-	 if unless val.nil? or query == 0  
-   	     puts "#{val[0]} | #{val[1]} | #{val[2]} | #{val[3]} | #{val[4]} | #{val[5]} | #{val[6]} | #{val[7]}"	     
+     
+	 puts "Retrieved successfully"   
+ 	 puts "the retrieved data for UNITID  :"+key+" is displayed below"
+	 puts " OPEID -- opeid6 -- INSTNM -- CITY -- STABBR -- INSTURL -- NPCURL -- LOCALE"
+   	 attribute=JSON.parse(query)
+	 if unless attribute.nil? or res_query == 0  
+   	     puts "#{attribute[0]} -- #{attribute[1]} -- #{attribute[2]} -- #{attribute[3]} -- #{attribute[4]} -- #{attribute[5]} -- #{attribute[6]} -- #{attribute[7]}"	     
          end
-         end
+         
     end
-    end    
+     
     redisConn.quit
     puts "Connection closed"
 end

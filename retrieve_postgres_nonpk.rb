@@ -15,7 +15,7 @@ begin
 	puts "Enter the value for the non primary key"
     key_value=gets.chomp
    
-    result= connection.exec("SELECT * from university where "+column_name+" ='"+key_value+"' limit 10;");
+    result= connection.exec("SELECT * from university where "+column_name+" ='"+key_value+"' limit 20;");
  
 	    puts "The key results are :\n"
     	    puts "UNITID -- OPEID -- opeid6 -- INSTNM -- CITY -- STABBR -- INSTURL -- NPCURL -- LOCALE"
